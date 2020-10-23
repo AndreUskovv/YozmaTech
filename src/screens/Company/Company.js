@@ -1,9 +1,11 @@
 import React from 'react';
 import {View, Text, Image, ScrollView} from 'react-native';
 import styles from './styles';
+import Article from '../../components/Article';
 
 
-const Company = ({item}) => {
+const Company = ({item, articles}) => {
+    console.log("arcticle", articles);
     return (
         <ScrollView
             showsVerticalScrollIndicator={false}
@@ -16,6 +18,8 @@ const Company = ({item}) => {
                     {item.description}
                 </Text>
             </View>
+
+            <Article article={articles.content} />
         </ScrollView>
     )
 };
