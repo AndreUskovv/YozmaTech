@@ -7,20 +7,11 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  StatusBar,
-} from 'react-native';
-import Company from './src/screens/Company';
+import AppNavigator from './src/navigation/AppNavigator';
 
 const App: () => React$Node = () => {
   return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <Company />
-      </SafeAreaView>
-    </>
+      <AppNavigator />
   );
 };
 

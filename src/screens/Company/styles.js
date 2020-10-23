@@ -4,7 +4,6 @@ import Colors from '../../config/Colors';
 const styles = {
     container: {
         flexDirection: 'column',
-        justifyContent: 'center',
         alignItems: 'center'
     },
     title: {
