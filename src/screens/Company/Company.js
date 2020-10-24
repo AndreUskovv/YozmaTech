@@ -19,7 +19,7 @@ const Company = ({item, articles}) => {
                 </Text>
             </View>
 
-            <Article article={articles.content} />
+            <Article article={articles?.content} />
         </ScrollView>
     )
 };
