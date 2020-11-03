@@ -19,6 +19,7 @@ const TabNavigator = () => {
         fetch(`http://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`)
             .then(response => response.json())
             .then(r => setArticles(r.articles))
+            .catch(() => {})
     }, []);
 
     const SomeCompany = props => {
