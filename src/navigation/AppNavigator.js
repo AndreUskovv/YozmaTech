@@ -11,6 +11,7 @@ const Tab = createMaterialTopTabNavigator();
 
 const API_KEY = "95b8357b1e7640b7b0b7807ff5aa0bcd";
 
+
 const TabNavigator = () => {
     const [articles, setArticles] = useState([]);
 
@@ -20,6 +21,13 @@ const TabNavigator = () => {
             .then(r => setArticles(r.articles))
     }, []);
 
+    const SomeCompany = props => {
+        const {item, index} = props.route.params;
+        return (
+            <Company item={item} articles={articles[index]}  />
+        )
+    };
+
     return (
         <Tab.Navigator initialRouteName="Yozma Tech">
             {
@@ -28,7 +36,8 @@ const TabNavigator = () => {
                         <Tab.Screen
                             key={index}
                             name={item.title}
-                            component={() => <Company item={item} articles={articles[index]}  />}
+                            initialParams={{ item, index }}
+                            component={SomeCompany}
                         />
                     )
                 })

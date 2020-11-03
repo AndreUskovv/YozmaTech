@@ -4,7 +4,6 @@ import styles from './styles';
 
 
 const Article = ({article}) => {
-    console.log(article);
     return (
         <View style={styles.container}>
             <Text style={styles.text}>

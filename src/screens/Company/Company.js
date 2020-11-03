@@ -5,7 +5,6 @@ import Article from '../../components/Article';
 
 
 const Company = ({item, articles}) => {
-    console.log("arcticle", articles);
     return (
         <ScrollView
             showsVerticalScrollIndicator={false}
@@ -19,7 +18,10 @@ const Company = ({item, articles}) => {
                 </Text>
             </View>
 
-            <Article article={articles?.content} />
+            {
+                articles &&
+                <Article article={articles?.content} />
+            }
         </ScrollView>
     )
 };
